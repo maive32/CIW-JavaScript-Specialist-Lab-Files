@@ -5,15 +5,15 @@
 
 <script type="text/javascript">
 <!--
-
-function openWindow(){
+document.write("<p>The property <strong><em>navigator.userAgent</em></strong>" + "returns:<br /><strong><font color='#FF0000'>" + navigator.userAgent + "</font><strong></p>");
+function openWindow() {
 var info="";
 
-  info += "Welcome, " +               ;         //Add appCodeName here
+  info += "Welcome, " + navigator.appCodeName;         //Add appCodeName here
   info += " user!\nYou are using the "; 
-  info +=      + " browser,\nversion ";        //Add appName here
-  info +=      + ".\nYour user agent ";       //Add appVersion here
-  info += "information is " +         ;          //Add userAgent here
+  info += navigator.appName + " browser,\nversion ";        //Add appName here
+  info += navigator.appVersion + ".\nYour user agent ";       //Add appVersion here
+  info += "information is " + navigator.userAgent;          //Add userAgent here
 
   alert(info);
 }
