@@ -18,17 +18,20 @@
 	  images/ciw_on.gif, images/ciw_off.gif, 
 	  images/ciw1_on.gif, images/ciw1_off.gif 
 **************************************************************/
-	
+	var ciw_on, ciw_off, ciwi_on, ciw1;
     
+	ciw_on = new Image();
+	ciw_on.src = "images/ciw_on.gif";
 	
+	ciw_off = new Image();
+	ciw_off.src = "images/ciw_off.gif";
 	
-	
-	
-	
-	
-	
-	
-	
+	ciw1_on = new Image();
+	ciw1_on.src = "images/ciw1_on.gif";
+
+	ciw1_off = new Image();
+	ciw1_off.src = "images/ciw_off.gif";
+
 	function imageOn(imagename) {
 	  if (document.images) {
 	    (imagename == "ciw")  ? document.images[0].src = ciw_on.src : "";
