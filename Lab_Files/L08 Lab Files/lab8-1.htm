@@ -10,8 +10,9 @@
   // Complete the employeeObject constructor
   // Remember to add a method called showEmployee
   function employeeObject(name,department,extension) {
-
-  
+    this.name = name; 
+    this.department = department; 
+    this.extension = extension; 
   
   
     }
@@ -20,17 +21,18 @@
   // Important - Start your array index numbers with 1
       var employees = new Array();
   employees[0] = "Select Employee";
-                               ("Mai Li", "Sales", 551);
-                               ("Maria Alvarez", "Human Resources", 441);
-                               ("Tom Smith", "Marketing", 331);
+                               employees[1] = new employeeObject("Mai Li", "Sales", 551);
+                               employees[2] = new employeeObject("Maria Alvarez", "Human Resources", 441);
+                               employees[3] = new employeeObject("Tom Smith", "Marketing", 331);
   
   len = employees.length;
   
     function showEmployee() {
       var info = "";
   // Complete the showEmployee() function
-    
-    
+      info += "Employee: " + this.name + "\n"; 
+      info += "Department: " + this.department + "\n";
+      info += "Extension: " + this.extension + "\n";
     
       alert(info);
     }
