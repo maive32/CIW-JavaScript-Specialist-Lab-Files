@@ -17,7 +17,25 @@ function changeButton()
   if(document.getElementById('radiobuttonGovernment').checked === true)
   {
 	radioButton = document.getElementById('radiobuttonGovernment').value;
-	var header = document.getElementById('radiobuttonWebdev').value.innerHTML = "Uncle Sam!";
+	var header = document.getElementById('radiobuttonGovernment').value.innerHTML = "Uncle Sam!";
+	alert("Hello " + header);
+  }
+  if(document.getElementById('radiobuttonJavascript').checked === true)
+  {
+  ratioButton = document.getElementById('radiobuttonJavascript').value;
+  var header = document.getElementById('radiobuttonJavascript').value.innerHTML = "JavaScripter!";
+  alert ("Hello " + header); 
+  }
+  if(document.getElementById('radiobuttonEntertainment').checked === true)
+  {
+	radioButton = document.getElementById('radiobuttonEntertainment').value;
+	var header = document.getElementById('radiobuttonEntertainment').value.innerHTML = "Vaush bad!";
+	alert("Hello " + header);
+  }
+  if(document.getElementById('radiobuttonPolitics').checked === true)
+  {
+	radioButton = document.getElementById('radiobuttonPolitics').value;
+	var header = document.getElementById('radiobuttonPolitics').value.innerHTML = "Bernie Sanders!";
 	alert("Hello " + header);
   }
   getTest();
@@ -33,9 +51,9 @@ function changeButton()
 <p>Please select your favorite type of Web site:</p>
 <input id="radiobuttonWebdev" type="radio" name="group1" value="Web_Development" checked>Web Development</input><br />
 <input id="radiobuttonGovernment" type="radio" name="group1" value="Government">U.S. Government</input><br />
-<input id="a" type="radio" name="group1" value="A">A</input><br />
-<input id="b" type="radio" name="group1" value="B">B</input><br />
-<input id="c" type="radio" name="group1" value="C">C</input><br />
+<input id="radiobuttonJavascript" type="radio" name="group1" value="JavaScript">JavaScript</input><br />
+<input id="radiobuttonEntertainment" type="radio" name="group1" value="Entertainment">Entertainment</input><br />
+<input id="radiobuttonPolitics" type="radio" name="group1" value="Politics">Politics</input><br />
 
 
 <script type="text/javascript">
@@ -53,6 +71,21 @@ function getTest()
   if(radioButton == "Government")
   {
 	document.write("<p>Here's a great site if you're interested in U.S. government:</p><a href=http://www.whitehouse.gov/>The White House</a>");
+  }
+
+  if(radioButton == "JavaScript") 
+  {
+  document.write("<p>Here's a great site if you're interested in JavaScript:</p><a href=https://eloquentjavascript.net/index.html>Eloquent JavaScript</a>");
+  }
+
+  if(radioButton == "Entertainment")
+  {
+  document.write("<p>Here's a great site if you're interested in being entertained:</p><a href=https://www.youtube.com/>YouTube</a>");
+  }
+
+  if(radioButton == "Politics")
+  {
+  document.write("<p>Here's a great site if you're interested in politics:</p><a href=https://en.wikipedia.org/wiki/Nineteen_Eighty-Four>1984 Wiki</a>");
   }
 }
 -->
