@@ -12,7 +12,7 @@
       <script type="text/jsx">
     // Let's create a "real-time search" component
 
-   class Searching extends React.Component {
+    class Searching extends React.Component {
       constructor(props) {
       super(props);
       this.state = {
@@ -22,7 +22,7 @@
       handleChange(e) {
       this.setState({filterString:e.target.value});
       }
-   
+      
       render() {
       var librariesExample = this.props.items,
       filterString = this.state.filterString.trim().toLowerCase();
@@ -36,13 +36,14 @@
       <input type="text" value={this.state.filterString} onChange={this.handleChange.bind(this)} placeholder="Type here" />
       <ul>
       { librariesExample.map(function(l){
-      return <li>{l.name} <br/><a href={l.url}>{l.url}</li>
+      return <li>{l.name} <br/><a href={l.url}></a>{l.url}</li>
       })}
-   
+      </ul>
+      </div>
       );
       }
       }
-   
+      
       var librariesExample = [
       { name: 'Backbone.js', url: 'https://backbonejs.org/'},
       { name: 'AngularJS', url: 'https://angularjs.org/'},
@@ -58,16 +59,16 @@
       { name: 'Moment', url: 'http://momentjs.com/'},
       { name: 'Express', url: 'http://expressjs.com/'},
       { name: 'Koa', url: 'http://koajs.com/'},
-   
+      
       ];
-   
+      
       // Render the Searching component on the page
-   
+      
       React.render(
       <Searching items={ librariesExample } />,
       document.getElementById('myDiv')
       );
-
+      
        </script>
      </body>
    </html>
